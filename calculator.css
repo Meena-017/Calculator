@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .calculator {
+    width: 340px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  #display {
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    color: #0f0;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  .history-btn {
+    grid-column: span 4;
+    background-color: #444;
+  }
+  
+  .history-btn:hover {
+    background-color: #333;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-content {
+    background-color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }  
+  .close:hover,
+  .close:focus {
+    color: #fff;
+  }
+  #history-list {
+    list-style-type: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  #history-list li {
+    padding: 10px;
+    background-color: #444;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  .clear-history-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .clear-history-btn:hover {
+    background-color: #c0392b;
+  }
+  
